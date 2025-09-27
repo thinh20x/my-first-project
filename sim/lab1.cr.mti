@@ -1,0 +1,80 @@
+E:/hk251/FPGA/lab/lab1/src/quartus/tb_audio_effects_sine.sv {1 {vlog -work work -sv E:/hk251/FPGA/lab/lab1/src/quartus/tb_audio_effects_sine.sv
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module tb_audio_effects_sine
+
+Top level modules:
+	tb_audio_effects_sine
+
+} {} {}} E:/hk251/FPGA/lab/lab1/src/quartus/square_wave.v {1 {vlog -work work E:/hk251/FPGA/lab/lab1/src/quartus/square_wave.v
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module square_wave
+
+Top level modules:
+	square_wave
+
+} {} {}} E:/hk251/FPGA/lab/lab1/src/quartus/sawtooth_wave.v {1 {vlog -work work E:/hk251/FPGA/lab/lab1/src/quartus/sawtooth_wave.v
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module sawtooth_wave
+
+Top level modules:
+	sawtooth_wave
+
+} {} {}} E:/hk251/FPGA/lab/lab1/src/quartus/lab1.sv {1 {vlog -work work -sv E:/hk251/FPGA/lab/lab1/src/quartus/lab1.sv
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module lab1
+
+Top level modules:
+	lab1
+
+} {} {}} E:/hk251/FPGA/lab/lab1/src/quartus/audio_codec.v {1 {vlog -work work E:/hk251/FPGA/lab/lab1/src/quartus/audio_codec.v
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module audio_codec
+-- Compiling module audio_effects
+
+Top level modules:
+	audio_codec
+	audio_effects
+
+} {} {}} E:/hk251/FPGA/lab/lab1/src/quartus/triangle_wave.v {1 {vlog -work work E:/hk251/FPGA/lab/lab1/src/quartus/triangle_wave.v
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module triangle_wave
+
+Top level modules:
+	triangle_wave
+
+} {} {}} E:/hk251/FPGA/lab/lab1/src/quartus/noise_generator.v {1 {vlog -work work E:/hk251/FPGA/lab/lab1/src/quartus/noise_generator.v
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module noise_generator
+
+Top level modules:
+	noise_generator
+
+} {} {}} E:/hk251/FPGA/lab/lab1/src/quartus/i2c_controller.v {1 {vlog -work work E:/hk251/FPGA/lab/lab1/src/quartus/i2c_controller.v
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module i2c_controller
+
+Top level modules:
+	i2c_controller
+
+} {} {}} E:/hk251/FPGA/lab/lab1/src/quartus/i2c_av_config.v {1 {vlog -work work E:/hk251/FPGA/lab/lab1/src/quartus/i2c_av_config.v
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module i2c_av_config
+
+Top level modules:
+	i2c_av_config
+
+} {} {}} E:/hk251/FPGA/lab/lab1/src/quartus/ecg_wave.v {1 {vlog -work work E:/hk251/FPGA/lab/lab1/src/quartus/ecg_wave.v
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module ecg_wave
+
+Top level modules:
+	ecg_wave
+
+} {} {}} E:/hk251/FPGA/lab/lab1/src/quartus/clock_pllclock_pll.v {1 {vlog -work work E:/hk251/FPGA/lab/lab1/src/quartus/clock_pllclock_pll.v
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module clock_pll
+
+Top level modules:
+	clock_pll
+
+} {} {}}

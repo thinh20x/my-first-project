@@ -1,0 +1,239 @@
+m255
+K3
+13
+cModel Technology
+Z0 dE:\software\quartus\modelsim
+vaudio_codec
+Z1 I0:OGHlX>TfBQ`o=NeKJ^K3
+Z2 VE`SPcHcSX31VHIYPgJmBN2
+Z3 dE:\hk251\FPGA\lab\lab1\sim
+Z4 w1757950481
+Z5 8E:/hk251/FPGA/lab/lab1/src/quartus/audio_codec.v
+Z6 FE:/hk251/FPGA/lab/lab1/src/quartus/audio_codec.v
+L0 1
+Z7 OV;L;10.1d;51
+r1
+31
+Z8 !s108 1757951307.906000
+Z9 !s107 E:/hk251/FPGA/lab/lab1/src/quartus/audio_codec.v|
+Z10 !s90 -reportprogress|300|-work|work|E:/hk251/FPGA/lab/lab1/src/quartus/audio_codec.v|
+Z11 o-work work -O0
+Z12 !s100 7Xo7aVch1Om3_SmHR_cV?0
+!i10b 1
+!s85 0
+!s101 -O0
+vaudio_effects
+Z13 IUBDZS>KC6?S2Mcg]TeHiI1
+Z14 V__m1cnbkAUSkiB4NUJgFG3
+R3
+R4
+R5
+R6
+L0 79
+R7
+r1
+31
+R8
+R9
+R10
+R11
+Z15 !s100 ?l4?:4KT0X?>246ZJ5@z32
+!i10b 1
+!s85 0
+!s101 -O0
+vclock_pll
+Z16 ISU[3;zkS5Wj6_MG07e:3j2
+Z17 VZANcle45^j2Yk[8Cj^fQQ1
+R3
+Z18 w1741507113
+Z19 8E:/hk251/FPGA/lab/lab1/src/quartus/clock_pllclock_pll.v
+Z20 FE:/hk251/FPGA/lab/lab1/src/quartus/clock_pllclock_pll.v
+L0 1
+R7
+r1
+31
+R11
+Z21 !s100 lkd5=R3]?:@MA:`@IeRil0
+Z22 !s108 1757951308.238000
+Z23 !s107 E:/hk251/FPGA/lab/lab1/src/quartus/clock_pllclock_pll.v|
+Z24 !s90 -reportprogress|300|-work|work|E:/hk251/FPGA/lab/lab1/src/quartus/clock_pllclock_pll.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vecg_wave
+Z25 I66gI=LE4XlgYCd<0;h[z?2
+Z26 VTC?Z5?zOU4kC;V;h:Sh[k0
+R3
+Z27 w1741507115
+Z28 8E:/hk251/FPGA/lab/lab1/src/quartus/ecg_wave.v
+Z29 FE:/hk251/FPGA/lab/lab1/src/quartus/ecg_wave.v
+L0 1
+R7
+r1
+31
+R11
+Z30 !s100 ;h]Y2hb[PVWIG1<856dzd2
+Z31 !s108 1757951308.324000
+Z32 !s107 E:/hk251/FPGA/lab/lab1/src/quartus/ecg_wave.v|
+Z33 !s90 -reportprogress|300|-work|work|E:/hk251/FPGA/lab/lab1/src/quartus/ecg_wave.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vi2c_av_config
+Z34 ITTTIT5iJ5WNhn6L@NC6CR2
+Z35 V9YfM`NTN0l1Ybk73LHCm10
+R3
+Z36 w1741507137
+Z37 8E:/hk251/FPGA/lab/lab1/src/quartus/i2c_av_config.v
+Z38 FE:/hk251/FPGA/lab/lab1/src/quartus/i2c_av_config.v
+L0 1
+R7
+r1
+31
+R11
+Z39 !s100 l@AF@i3H9I_5Lm]ZzCgeK0
+Z40 !s108 1757951308.415000
+Z41 !s107 E:/hk251/FPGA/lab/lab1/src/quartus/i2c_av_config.v|
+Z42 !s90 -reportprogress|300|-work|work|E:/hk251/FPGA/lab/lab1/src/quartus/i2c_av_config.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vi2c_controller
+Z43 IVY[HASKQ7dNd6H^X_8T=d0
+Z44 V2_T:YO[0O^mF:a3]P77C;2
+R3
+Z45 w1741507139
+Z46 8E:/hk251/FPGA/lab/lab1/src/quartus/i2c_controller.v
+Z47 FE:/hk251/FPGA/lab/lab1/src/quartus/i2c_controller.v
+L0 1
+R7
+r1
+31
+R11
+Z48 !s100 8AE7Rje@MG4]Z0`Bl[HYY1
+Z49 !s108 1757951308.514000
+Z50 !s107 E:/hk251/FPGA/lab/lab1/src/quartus/i2c_controller.v|
+Z51 !s90 -reportprogress|300|-work|work|E:/hk251/FPGA/lab/lab1/src/quartus/i2c_controller.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vlab1
+Z52 DXx6 sv_std 3 std 0 22 F[19LRNL:5;XmIFh[XOPn1
+Z53 Ihh]C>_>LN:109G:>B3CLS2
+Z54 VlLAOBjMCJHgTVe>CYR?Kn1
+S1
+R3
+Z55 w1757949761
+Z56 8E:/hk251/FPGA/lab/lab1/src/quartus/lab1.sv
+Z57 FE:/hk251/FPGA/lab/lab1/src/quartus/lab1.sv
+L0 1
+R7
+r1
+31
+Z58 o-work work -sv -O0
+Z59 !s100 Q8@lFCPn_1iYWkiMm:J]@3
+Z60 !s105 lab1_sv_unit
+Z61 !s108 1757951308.595000
+Z62 !s107 E:/hk251/FPGA/lab/lab1/src/quartus/lab1.sv|
+Z63 !s90 -reportprogress|300|-work|work|-sv|E:/hk251/FPGA/lab/lab1/src/quartus/lab1.sv|
+!i10b 1
+!s85 0
+!s101 -O0
+vnoise_generator
+Z64 I2UD:hR5aD@Q:85FUN]lfN3
+Z65 VS[a?J]iX5j@Vh3_GLid;C2
+R3
+Z66 w1741507108
+Z67 8E:/hk251/FPGA/lab/lab1/src/quartus/noise_generator.v
+Z68 FE:/hk251/FPGA/lab/lab1/src/quartus/noise_generator.v
+L0 1
+R7
+r1
+31
+R11
+Z69 !s100 hmBikhl4^C79G]lljokcL0
+Z70 !s108 1757951308.805000
+Z71 !s107 E:/hk251/FPGA/lab/lab1/src/quartus/noise_generator.v|
+Z72 !s90 -reportprogress|300|-work|work|E:/hk251/FPGA/lab/lab1/src/quartus/noise_generator.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vsawtooth_wave
+Z73 IklkAH[RX]8DiCec_Bi`771
+Z74 V=FE_1b:d:k>5DIi<9V:zi0
+R3
+Z75 w1741507146
+Z76 8E:/hk251/FPGA/lab/lab1/src/quartus/sawtooth_wave.v
+Z77 FE:/hk251/FPGA/lab/lab1/src/quartus/sawtooth_wave.v
+L0 1
+R7
+r1
+31
+R11
+Z78 !s100 8`6^^BzTL:ZmZ3V;gT?Y91
+Z79 !s108 1757951308.922000
+Z80 !s107 E:/hk251/FPGA/lab/lab1/src/quartus/sawtooth_wave.v|
+Z81 !s90 -reportprogress|300|-work|work|E:/hk251/FPGA/lab/lab1/src/quartus/sawtooth_wave.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vsquare_wave
+Z82 IjImVK6D0D_7X??UTR[RI_1
+Z83 VIdKC7m[]8=]9dol^3SF`61
+R3
+Z84 w1741507157
+Z85 8E:/hk251/FPGA/lab/lab1/src/quartus/square_wave.v
+Z86 FE:/hk251/FPGA/lab/lab1/src/quartus/square_wave.v
+L0 1
+R7
+r1
+31
+R11
+Z87 !s100 dUIfde;6]gJ_PjZ6B3D7l3
+Z88 !s108 1757951309.009000
+Z89 !s107 E:/hk251/FPGA/lab/lab1/src/quartus/square_wave.v|
+Z90 !s90 -reportprogress|300|-work|work|E:/hk251/FPGA/lab/lab1/src/quartus/square_wave.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vtb_audio_effects_sine
+R52
+Z91 I6>?GiW^NdSiX@Gh<Gz5Fc3
+Z92 Vl>g1mMb@TZC::4E`b@TPl0
+S1
+R3
+Z93 w1757951032
+Z94 8E:/hk251/FPGA/lab/lab1/src/quartus/tb_audio_effects_sine.sv
+Z95 FE:/hk251/FPGA/lab/lab1/src/quartus/tb_audio_effects_sine.sv
+L0 4
+R7
+r1
+31
+R58
+!i10b 1
+Z96 !s100 6D=<El09]KX5z:KWDSTEn2
+Z97 !s105 tb_audio_effects_sine_sv_unit
+!s85 0
+Z98 !s108 1757951309.100000
+Z99 !s107 E:/hk251/FPGA/lab/lab1/src/quartus/tb_audio_effects_sine.sv|
+Z100 !s90 -reportprogress|300|-work|work|-sv|E:/hk251/FPGA/lab/lab1/src/quartus/tb_audio_effects_sine.sv|
+!s101 -O0
+vtriangle_wave
+!i10b 1
+!s100 gLVSNgZ:o0^F8ZoncTe4]2
+IQ3XVgoMd;bgcCmKco;F7C1
+VHl0LeLR<K7Z8ld5bba<KF0
+R3
+w1741507161
+8E:/hk251/FPGA/lab/lab1/src/quartus/triangle_wave.v
+FE:/hk251/FPGA/lab/lab1/src/quartus/triangle_wave.v
+L0 1
+R7
+r1
+!s85 0
+31
+!s108 1757951309.194000
+!s107 E:/hk251/FPGA/lab/lab1/src/quartus/triangle_wave.v|
+!s90 -reportprogress|300|-work|work|E:/hk251/FPGA/lab/lab1/src/quartus/triangle_wave.v|
+!s101 -O0
+R11
