@@ -1,27 +1,30 @@
-// triangle_wave.sv
-// Uses phase accumulator and maps to triangle shape
+// ============================================================
+// TRIANGLE WAVE GENERATOR - triangle_wave.v
+// ============================================================
 module triangle_wave (
     input  wire        clk,
     input  wire        reset,
     input  wire [15:0] step,
     output reg  [15:0] wave_out
 );
-    reg [31:0] phase_acc;
+    reg [15:0] phase_acc;
 
+    // Phase accumulator
     always @(posedge clk or posedge reset) begin
-        if (reset) phase_acc <= 0;
-        else phase_acc <= phase_acc + {16'd0, step};
+        if (reset) 
+            phase_acc <= 16'd0;
+        else 
+            phase_acc <= phase_acc + step;
     end
 
-    // map phase to triangle: use top 16 bits of phase
-    wire [15:0] top = phase_acc[31:16];
+    // Generate triangle wave
     always @(posedge clk) begin
-        if (top[15] == 1'b0) begin
-            // rising half
-            wave_out <= {1'b0, top[14:0]}; // scale as needed
+        if (phase_acc[15] == 1'b0) begin
+            // Rising half: 0 to 7FFF
+            wave_out <= {1'b0, phase_acc[14:0]};
         end else begin
-            // falling half
-            wave_out <= ~{1'b0, top[14:0]}; // invert
+            // Falling half: 7FFF to 0 (inverted)
+            wave_out <= {1'b0, ~phase_acc[14:0]};
         end
     end
 endmodule
