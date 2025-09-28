@@ -1,38 +1,51 @@
+// ============================================================
+// CLOCK PLL - clock_pll.v
+// ============================================================
 module clock_pll (
-    input  wire refclk,     // Input clock (50 MHz từ OSC_50_B8A)
-    input  wire rst,        // Reset signal
-    input  wire [1:0] freq_sel, // Tín hiệu chọn tần số (SW[1:0])
-    output wire outclk_0,   // Audio clock (tần số thay đổi)
-    output wire outclk_1    // Main clock (50 MHz)
+    input  wire        refclk,     // Input clock (50 MHz từ OSC_50_B8A)
+    input  wire        rst,        // Reset signal
+    input  wire [1:0]  freq_sel,   // Frequency selection (for future use)
+    output wire        outclk_0,   // Audio clock (12.288 MHz)
+    output wire        outclk_1    // Main clock (50 MHz passthrough)
 );
 
-// Bộ chia tần số cho audio_clk
-reg [3:0] audio_counter = 0;
-reg [3:0] divider; // Giá trị chia dựa trên freq_sel
+// Simple clock divider implementation
+// For proper implementation, use Quartus PLL IP
+reg [7:0] div_counter = 8'd0;
+reg clk_div = 1'b0;
 
+// Divide 50MHz by ~4 to get approximately 12.5MHz
+// For exact 12.288MHz, you should use Quartus PLL IP
 always @(posedge refclk or posedge rst) begin
     if (rst) begin
-        audio_counter <= 0;
-        divider <= 4'd3; // Mặc định chia 4 (12.5 MHz)
+        div_counter <= 8'd0;
+        clk_div <= 1'b0;
     end else begin
-        // Chọn divider dựa trên freq_sel
-        case (freq_sel)
-            2'b00: divider <= 4'd1; // 50 MHz / 2 = 25 MHz
-            2'b01: divider <= 4'd3; // 50 MHz / 4 = 12.5 MHz
-            2'b10: divider <= 4'd7; // 50 MHz / 8 = 6.25 MHz
-            2'b11: divider <= 4'd15; // 50 MHz / 16 = 3.125 MHz
-        endcase
-
-        if (audio_counter >= divider) begin
-            audio_counter <= 0;
+        if (div_counter >= 8'd1) begin // Divide by 4 approximately
+            div_counter <= 8'd0;
+            clk_div <= ~clk_div;
         end else begin
-            audio_counter <= audio_counter + 1;
+            div_counter <= div_counter + 1'b1;
         end
     end
 end
 
-// Tạo xung audio_clk
-assign outclk_0 = (audio_counter <= (divider >> 1)) ? 1'b1 : 1'b0; // Duty cycle 50%
-assign outclk_1 = refclk; // Giữ nguyên main_clk
+// Output assignments
+assign outclk_0 = clk_div;     // ~12.5 MHz (use PLL IP for exact 12.288MHz)
+assign outclk_1 = refclk;      // 50 MHz passthrough
 
 endmodule
+
+// ============================================================
+// NOTE: For production design, replace this with Quartus PLL IP:
+// 
+// 1. Open Quartus Prime
+// 2. Tools -> IP Catalog
+// 3. Search for "PLL"
+// 4. Select "FPGA PLL (Phase Locked Loop)"
+// 5. Configure:
+//    - Reference clock: 50 MHz
+//    - Output clock 0: 12.288 MHz
+//    - Output clock 1: 50 MHz (optional)
+// 6. Generate and instantiate the IP
+// ============================================================

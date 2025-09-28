@@ -1,5 +1,5 @@
 // ============================================================
-// TOP MODULE - lab1.sv
+// TOP MODULE - lab1.sv (CORRECTED)
 // ============================================================
 module lab1 (
     // Clock and Reset
@@ -30,42 +30,42 @@ module lab1 (
     wire reset_n = KEY[0];
     wire reset = ~reset_n;
     
-    // PLL for audio clock generation (12.288 MHz for 48kHz sampling)
+    // PLL for audio clock generation
     wire audio_clk;
-    wire pll_locked;
     
     clock_pll audio_pll (
         .refclk(clk_50m),
         .rst(reset),
-        .freq_sel(SW[6:5]),
-        .outclk_0(audio_clk),    // 12.288 MHz
+        .freq_sel(2'b01),        // Fixed for 12.288MHz audio
+        .outclk_0(audio_clk),    // ~12MHz audio clock
         .outclk_1()              // Unused
     );
     
     assign AUD_XCK = audio_clk;
 
     // ================================
-    // Control Signal Processing
+    // Control Signal Processing (theo yêu cầu prelab1)
     // ================================
-    wire [2:0] waveform_sel = SW[2:0];
-    wire [1:0] freq_sel = SW[6:5];
-    wire [1:0] amp_sel = SW[4:3];
-    wire noise_enable = SW[7];
-    wire noise_amp_sel = SW[8];
-    wire noise_freq_sel = SW[9];
+    wire [2:0] waveform_sel = SW[2:0];    // SW[2:0]: waveform selection
+    wire [1:0] freq_sel = SW[6:5];        // SW[6:5]: frequency selection  
+    wire [1:0] amp_sel = SW[4:3];         // SW[4:3]: amplitude selection
+    wire noise_enable = SW[7];            // SW[7]: noise enable
+    wire noise_amp_sel = SW[8];           // SW[8]: noise amplitude
+    wire noise_freq_sel = SW[9];          // SW[9]: noise frequency
     
-    // Button debouncing for duty cycle control
+    // Button debouncing for duty cycle control (KEY[2])
     wire duty_button_clean;
     button_debouncer duty_debounce (
         .clk(clk_50m),
         .reset(reset),
-        .button_in(~KEY[2]),
+        .button_in(~KEY[2]),      // KEY[2] for duty cycle
         .button_clean(duty_button_clean)
     );
     
     // Duty cycle counter (cycles through 25%, 50%, 75%)
-    reg [1:0] duty_cycle = 2'b00;
+    reg [1:0] duty_cycle = 2'b01;  // Start with 50%
     wire duty_edge;
+    
     edge_detector duty_edge_det (
         .clk(clk_50m),
         .signal_in(duty_button_clean),
@@ -198,9 +198,14 @@ module lab1 (
     );
 
     // ================================
-    // Status and Debug
+    // Status and Debug LEDs (theo yêu cầu prelab1)
     // ================================
-    assign LED = {noise_freq_sel, noise_amp_sel, noise_enable, waveform_sel, i2c_status};
+    assign LED[3:0] = i2c_status;           // I2C configuration status
+    assign LED[6:4] = waveform_sel;         // Current waveform
+    assign LED[7] = noise_enable;           // Noise enable status
+    assign LED[8] = |mixed_audio[15:14];    // Audio activity indicator
+    assign LED[9] = duty_edge;              // Duty cycle change indicator
+    
     assign AUD_ADCLRCK = 1'b0; // Unused
 
 endmodule
